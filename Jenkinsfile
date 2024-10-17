@@ -31,7 +31,7 @@ pipeline {
                 // To run Maven on a Windows agent, use
                 bat 'docker build -t gateway-server-image .'
 //                 bat 'docker network create -d bridge oms-network'
-                bat 'docker run --network oms-network -p 8222:8222 -d --name gatewayserver-sr security-server-image'
+                bat 'docker run --network oms-network -p 8222:8222 -d --name gatewayserver-sr gateway-server-image'
             }
         }
     }
