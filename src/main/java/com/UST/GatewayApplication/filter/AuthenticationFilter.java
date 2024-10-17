@@ -44,7 +44,7 @@ public class AuthenticationFilter extends AbstractGatewayFilterFactory<Authentic
                     RestClient restClient = RestClient.create();
                     restClient
                             .get()
-                            .uri("http://springsecurity-sr:8082/validate/token?token=" + authHeaderToken)
+                            .uri("http://securityserver-sr:8082/validate/token?token=" + authHeaderToken)
                             .retrieve()
                             .body(Boolean.class);
                     // also instead of making a RestClient call for every request, we can validate

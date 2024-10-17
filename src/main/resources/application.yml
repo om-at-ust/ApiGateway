@@ -26,7 +26,7 @@ spring:
           filters:
             - AuthenticationFilter
         - id: springsecurity
-          uri: http://springsecurity-sr:8082
+          uri: http://securityserver-sr:8082
           predicates:
             - Path=/**
 
